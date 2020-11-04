@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>学习第一步，使用hexo搭建自己的博客</title>
+      <link href="2020/11/03/xue-xi-di-yi-bu-shi-yong-hexo-da-jian-zi-ji-de-bo-ke/"/>
+      <url>2020/11/03/xue-xi-di-yi-bu-shi-yong-hexo-da-jian-zi-ji-de-bo-ke/</url>
+      
+        <content type="html"><![CDATA[<h1 id="小白的hexo博客快速搭建法"><a href="#小白的hexo博客快速搭建法" class="headerlink" title="小白的hexo博客快速搭建法"></a>小白的hexo博客快速搭建法</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul><li>下载git<br>百度官网下载git，这是个方方面面都用的到的工具  </li><li>下载nodejs<br>同样官网下载，下载方法自行百度，请仔细阅读下载流程，一定记得选Add。（具体网上有)  </li><li>配置node环境变量<br>打开下载好的nodejs文件夹，新建node_modules和node_global。<br>我的文件地址是D:\Program Files\nodejs，具体看自己下载情况<br>右击此电脑，选择属性，高级系统设置，环境变量</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2020/10/25/hello-world/"/>
       <url>2020/10/25/hello-world/</url>
