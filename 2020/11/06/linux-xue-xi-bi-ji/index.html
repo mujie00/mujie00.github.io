@@ -632,9 +632,50 @@
 </li>
 </ul>
 <h3 id="远程管理"><a href="#远程管理" class="headerlink" title="远程管理"></a>远程管理</h3><ul>
-<li>shh </li>
+<li><p>远程连接的准备工作  </p>
+<ul>
+<li>下载xshell，官网即可下载选学生用免费版即可。</li>
+<li>ifconfig 查看ip地址，在win10主机中IP查看命令为ipconfig。<br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/35.png"><br>如图，上方ens33对应的inet对应ip地址，用于和网络互通，下方lo对应inet为本机环回地址，用于检查本机网络连接状态。  </li>
+<li>ping 测试网络连接量，常用来查看两台主机是否网络互通。<br>ping通是远程连接的前置条件。<br>用法：ping [IP地址/网址]<br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/36.png">  </li>
 </ul>
-<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3>
+</li>
+<li><p>ssh 远程连接命令<br>格式：ssh [用户名]@[ip地址]<br>连接成功后即可访问目标主机/服务器（用xshell连接）<br>-p选项，指定端口位置<br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/37.png"><br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/38.png">  </p>
+</li>
+<li><p>scp 远程复制<br>格式：scp [要复制的文件] [用户名]@[IP地址]：[远程复制后文件位置]<br>scp -P 22 [用户名]@[IP地址]:[要复制的文件地址] [复制后文件地址]<br>-r选项，可以选择传送文件夹<br>-P选项，可以指定端口位置<br>注：ssh命令默认端口为22，非22时需要用-P指定。 </p>
+<ul>
+<li>注：Win系统无法使用该命令，建议下载xftp进行远程文件复制，无论服务器还是主机都方便快捷。<br>也可以使用FileZilla进行文件传输，我推荐xftp是因为在官网下载xshell是会同时下载xftp。  </li>
+</ul>
+</li>
+<li><p>ssh 高级  </p>
+<ul>
+<li>ssh信息都储存在.ssh文件中。  </li>
+<li>免密登录  <ul>
+<li>公钥配置shh-kengen 一路回车即可  </li>
+<li>公钥上传到服务器<br>ssh-copy-id -p [端口号] [用户名]@[ip地址]  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
+<li>echo （显示指定文字）与&gt;/&gt;&gt;（重定向）<br>echo命令通常与重定向同用<br>linux允许将内存追加到文件中<br>‘&gt;’输出，将终端上的内容输出的文件中，会覆盖文件。<br>‘&gt;&gt;’追加，在文件后追加终端中输入的内容。<br>格式：echo [终端内容] &gt; [文件名] 或 echo [终端内容] &gt;&gt; [文件名]    </li>
+<li>‘|’管道<br>管道是将两个命令同时执行的条件，命令符为“|”<br>例：cat -n mi | grep 2 将文件mi加行号查看，并选出含有2的行（包括行号）<br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/39.png">  </li>
+<li>软连接与硬链接  <ul>
+<li>ln 建立硬链接<br>-s选项，建立软连接<br>格式：ln -s [文件路径(绝对或相对)]<br>注：绝对比相对更稳定<br>软连接与硬链接概念<br><img src="linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/40.png">  </li>
+</ul>
+</li>
+</ul>
+<h2 id="笔记来自与后话"><a href="#笔记来自与后话" class="headerlink" title="笔记来自与后话"></a>笔记来自与后话</h2><ul>
+<li>到这里linux笔记告一段落，我会根据后续的学习不断对笔记进行更新，达到完善的目的。<br>学习语言和命令在于多练习。而非一味观看。文章和视频各有优缺，按自己需求选择。  </li>
+<li>笔记为学习linux视频与文章后自己的总结，在此附上资料链接  <ul>
+<li>视频: linux命令大全，来自b站，讲的很详细<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14z4y1Q7Hm?p=1">https://www.bilibili.com/video/BV14z4y1Q7Hm?p=1</a>  <ul>
+<li>文章： 只介绍了31个常用命令，但每个命令选项齐全<br><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/linux-common-command-2.html">https://www.runoob.com/w3cnote/linux-common-command-2.html</a><br>链接后续会随学习加深更新</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             </div>
             <hr/>
 
