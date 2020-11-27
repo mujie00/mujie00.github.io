@@ -520,7 +520,11 @@
 <ul>
 <li><p>more 查看文件内容<br>基本用法同cat类似，但如遇到内容极多的文件，cat命令直接显示至最底部，more从最开始按页显示。  </p>
 <img src="/2020/11/06/linux-xue-xi-bi-ji/8.png" class>  
-<p>按空格一次翻一页<br>按Enter向下 n 行，需要定义。默认为 1 行<br>按Ctrl+B后退一页<br>按Ctrl+F向前一页<br>按q退出查看  </p>
+<p>按空格一次翻一页<br>按Enter向下 n 行，需要定义。默认为 1 行<br>按Ctrl+B后退一页<br>按Ctrl+F向前一页<br>按q退出查看    </p>
+</li>
+<li><p>head 显示文件内容（默认十行）<br>格式：head [-n 行数] 文件名<br>head同more一般，可以按页查看   </p>
+</li>
+<li><p>tail 显示文件后几行，以动态显示<br>-f选项，表示持续查看文件，直到按Ctrl+C结束     </p>
 </li>
 <li><p>grep 查看文件<br>不同于cat和more，grep后接字符可查找指定内容<br>如grep 11 mu 意为查看mu文件中所有包含11的行    </p>
 <ul>
@@ -540,7 +544,9 @@
 </li>
 <li><p>rm 删除文件<br>rm 后加文件名可删除文件，但无法删除文件夹  </p>
 </li>
-<li><p>r选项，删除文件夹和目录，如rm -r 114是删除114这个文件夹  </p>
+<li><p>r选项，删除文件夹和目录，如rm -r 114是删除114这个文件夹    </p>
+</li>
+<li><p>f强制删除   </p>
 </li>
 <li><p>rf选项，删除且不询问  </p>
 </li>
@@ -717,13 +723,19 @@ sudo apt install htop 下载htop 效果是让top命令显示的界面更好看�
 </li>
 </ul>
 <h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
-<li>echo （显示指定文字）与&gt;/&gt;&gt;（重定向）<br>echo命令通常与重定向同用<br>linux允许将内存追加到文件中<br>‘&gt;’输出，将终端上的内容输出的文件中，会覆盖文件。<br>‘&gt;&gt;’追加，在文件后追加终端中输入的内容。<br>格式：echo [终端内容] &gt; [文件名] 或 echo [终端内容] &gt;&gt; [文件名]    </li>
-<li>‘|’管道<br>管道是将两个命令同时执行的条件，命令符为“|”<br>例：cat -n mi | grep 2 将文件mi加行号查看，并选出含有2的行（包括行号）  <img src="/2020/11/06/linux-xue-xi-bi-ji/39.png" class>  </li>
-<li>软连接与硬链接  <ul>
-<li>ln 建立硬链接<br>-s选项，建立软连接<br>格式：ln -s [文件路径(绝对或相对)]<br>注：绝对比相对更稳定<br>软连接与硬链接概念  <img src="/2020/11/06/linux-xue-xi-bi-ji/40.png" class>  
-
-
+<li><p>echo （显示指定文字）与&gt;/&gt;&gt;（重定向）<br>echo命令通常与重定向同用<br>linux允许将内存追加到文件中<br>‘&gt;’输出，将终端上的内容输出的文件中，会覆盖文件。<br>‘&gt;&gt;’追加，在文件后追加终端中输入的内容。<br>格式：echo [终端内容] &gt; [文件名] 或 echo [终端内容] &gt;&gt; [文件名]    </p>
 </li>
+<li><p>‘|’管道<br>管道是将两个命令同时执行的条件，命令符为“|”<br>例：cat -n mi | grep 2 将文件mi加行号查看，并选出含有2的行（包括行号）  </p>
+<img src="/2020/11/06/linux-xue-xi-bi-ji/39.png" class>  </li>
+<li><p>软连接与硬链接  </p>
+<ul>
+<li>ln 建立硬链接<br>-s选项，建立软连接<br>格式：ln -s [文件路径(绝对或相对)]<br>注：绝对比相对更稳定<br>软连接与硬链接概念  <img src="/2020/11/06/linux-xue-xi-bi-ji/40.png" class>    
+</li>
+</ul>
+</li>
+<li><p>man 使用手册<br>格式：man [命令] 用于记得命令写法却忘记命令用途时，查看命令具体用处。    </p>
+<ul>
+<li>info 格式用途和man均相同，但info更加详细。  </li>
 </ul>
 </li>
 </ul>
